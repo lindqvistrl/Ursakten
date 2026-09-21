@@ -29,3 +29,5 @@
 -Diskuterat backlog, sprint anpassar oss efter varandra.
 
 
+Richard Lindqvist
+
