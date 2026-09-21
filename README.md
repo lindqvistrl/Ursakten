@@ -33,3 +33,4 @@ Underskrivet av:
 -Richard Lindqvist
 -Elina Aspman
 -Dennis Kvarnström
+-Yanica Svensson
