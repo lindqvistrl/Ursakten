@@ -17,13 +17,13 @@
 
 -Om vi halkar efter så lyfter vi det.
 
-#Samarbete
+# Samarbete
 -Återkoppling på kod ger vi på tisdagar och torsdagar 15.00
 -Öppna för att koda live i grupp eller enskilt. 
 -Fördelar uppgifter beroende på hur vi ligger till.
 -Scrum master tillsätts på måndag, 2,5 dagar, sen byter vi 
 
-#Aktivitet
+# Aktivitet
 -Meddelar vid frånvaro
 
 -Diskuterat backlog, sprint anpassar oss efter varandra.
