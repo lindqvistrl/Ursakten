@@ -28,6 +28,7 @@
 
 -Diskuterat backlog, sprint anpassar oss efter varandra.
 
+Underskrivet av:
 
 Richard Lindqvist
-
+Elina Aspman
