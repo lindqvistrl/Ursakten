@@ -30,5 +30,6 @@
 
 Underskrivet av:
 
-Richard Lindqvist
-Elina Aspman
+-Richard Lindqvist
+-Elina Aspman
+-Dennis Kvarnström
