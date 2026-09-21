@@ -28,7 +28,7 @@
 
 -Diskuterat backlog, sprint anpassar oss efter varandra.
 
-Underskrivet av:
+# Underskrivet av:
 
 -Richard Lindqvist
 
