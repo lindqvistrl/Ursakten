@@ -28,6 +28,11 @@
 Arbetsuppgifter fördelas rättvist. Blir någon klar tidigare så hjälper man till där det behövs eller tar en ny uppgift från backloggen.
 
 
+# Ambition
+När majoriteten är överens om att uppgiften är klar. 
+
+# Förväntningar
+Vi gör så gott vi kan med den tid vi har utan att skapa en stress.
 
 
 # Underskrivet av:
