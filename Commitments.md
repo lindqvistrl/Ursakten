@@ -25,8 +25,10 @@
 
 # Aktivitet
 -Meddelar vid frånvaro
+Arbetsuppgifter fördelas rättvist. Blir någon klar tidigare så hjälper man till där det behövs eller tar en ny uppgift från backloggen.
 
--Diskuterat backlog, sprint anpassar oss efter varandra.
+
+
 
 # Underskrivet av:
 
