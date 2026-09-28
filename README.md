@@ -10,6 +10,8 @@ Skriv in vad du vill undvika. Appen hämtar en ursäkt från NaaS API och väder
 
 - HTML, CSS (Sass), JavaScript (Vanilla)
 - Vite som byggverktyg
+- API NaaS
+- API SMHI
 
 ## Kom igång
 
