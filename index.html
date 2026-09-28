@@ -19,11 +19,29 @@
   <h1>Få en ursäkt för vad du vill undvika</h1>
   <p class="ingress">Skriv in vad du vill undvika, så hjälper vi dig med en trovärdig ursäkt baserat på väder och plats.
   </p>
+  <!--Ett <input> kan inte ha något inuti sig, det är ett tomt element. Sökikonen kan därför inte läggas i fältet. Lösningen är en div class="sokfalt" som håller både ikonen och fältet. CSS lägger sedan ikonen ovanpå fältets vänstra kant, så att det ser ut som att den sitter inuti. 
   <div class="formularkort">
     <label for="undvika">Vad vill du undvika?</label>
     <input type="text" id="undvika" name="undvika">
     <button type="button" id="generera">Generera ursäkt</button>
+  </div> Skapar därför en ny div class -->
+  <div class="formularkort">
+  <label for="undvika">Vad vill du undvika?</label>
+  <div class="sokfalt">
+    <svg class="ikon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="11" cy="11" r="7"/>
+      <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+    </svg>
+    <input type="text" id="undvika" name="undvika">
   </div>
+  <button type="button" id="generera">
+    <svg class="ikon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8z"/>
+      <path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9z"/>
+    </svg>
+    Generera ursäkt
+  </button>
+</div>
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
