@@ -35,3 +35,19 @@ header {
 .formularkort {
   background-color: lightblue;
 }
+
+// Gömmer element visuellt men låter skärmläsare läsa dem.
+// Används på labeln och rubriken i "Så funkar det".
+// Använd inte display: none, det gömmer även för skärmläsare.
+
+.visuellt-dold {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
