@@ -1,6 +1,8 @@
 # Daily Standups 
 
-
+## 29/9
+Richard, Elina har jobbat med HTML moduler under föregående dag och jobbat med några under dagen. 
+Har gått över på CSS och jobbar med de modulerna.
 
 ## 28/9
 Yanica: Jag har gått igenom javascript moduler.
