@@ -6,6 +6,7 @@ $bakgrund-ljus: #F2F2F2;
 $text: #1F2A26;
 $accent: #1F4D40;
 $accent-sol: #E0A93B;
+$ram: #92a2ae;
 
 //Fontstorlekar
 $font-liten: 0.875rem;
@@ -60,13 +61,37 @@ header {
   display: flex;
 }
 
-//Skapar utrymme mellan varje list item.
+//Stegen delar bredden lika, texten centrerad
 .sa-funkar-det li {
   flex: 1;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 $spacing-m;
 }
 
 .sa-funkar-det li + li {
-  border-left: 1px solid #D5DBD6;
+  border-left: 1px solid $ram;
+}
+
+// Sökfält med ikon inuti
+.sokfalt {
+  position: relative;
+}
+
+.sokfalt .ikon {
+  position: absolute;
+  left: $spacing-m;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $accent;
+  pointer-events: none;
+}
+
+.sokfalt input {
+  width: 100%;
+  padding: $spacing-s $spacing-m;
+  padding-left: 2.75rem;
+  box-sizing: border-box;
+  border: 1.5px solid $ram;
+  border-radius: 0.75rem;
+  font-size: $font-bas;
 }
