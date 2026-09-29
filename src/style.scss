@@ -1,22 +1,13 @@
 @use "reset";
+
+
+
 $background-color: #f7f7f2;
 $text-color: #1f4d40; 
 $label-color: #4a6a62; 
-body {
-  background-color: $background-color;
-  color: $text-color;
-
-}
-label {
-  color: $label-color;
-}
-
-header {
-  display: flex;
-}
 
 //Färger
-$bakgrund: #F5F6F2;
+ $bakgrund: #F5F6F2;
 $bakgrund-ljus: #F2F2F2;
 $text: #1F2A26;
 $accent: #1F4D40;
@@ -24,6 +15,8 @@ $accent-sol: #E0A93B;
 $ram: #92a2ae;
 
 //Fontstorlekar
+$font-body: "Helvetica Neue", Arial, sans-serif;
+$font-heading: Georgia, "Times New Roman", serif;
 $font-liten: 0.875rem;
 $font-bas: 1rem;
 $font-stor: 1.25rem;
@@ -35,6 +28,19 @@ $spacing-m: 1rem;
 $spacing-l: 2rem;
 $spacing-xl: 4rem;
 
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+
+label {
+  color: $label-color;
+}
 
 header {
   display: flex;
