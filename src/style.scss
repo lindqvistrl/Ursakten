@@ -1,11 +1,31 @@
 @use "reset";
 
+//Färger
+$bakgrund: #F5F6F2;
+$bakgrund-ljus: #F2F2F2;
+$text: #1F2A26;
+$accent: #1F4D40;
+$accent-sol: #E0A93B;
+
+//Fontstorlekar
+$font-liten: 0.875rem;
+$font-bas: 1rem;
+$font-stor: 1.25rem;
+$font-rubrik: 2.5rem;
+
+//Spacing
+$spacing-s: 0.5rem;
+$spacing-m: 1rem;
+$spacing-l: 2rem;
+$spacing-xl: 4rem;
+
+
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f2f2f2;
-  padding: 1rem;
+  background-color: $bakgrund-ljus;
+  padding: $spacing-m;
 }
 
 .logo {
