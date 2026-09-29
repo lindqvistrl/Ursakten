@@ -1,7 +1,14 @@
 @use "reset";
 $background-color: #f7f7f2;
+$text-color: #1f4d40; 
+$label-color: #4a6a62; 
 body {
   background-color: $background-color;
+  color: $text-color;
+
+}
+label {
+  color: $label-color;
 }
 
 header {
