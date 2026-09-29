@@ -1,4 +1,12 @@
 @use "reset";
+$background-color: #f7f7f2;
+body {
+  background-color: $background-color;
+}
+
+header {
+  display: flex;
+}
 
 header {
   display: flex;
@@ -14,4 +22,4 @@ header {
 
 .formularkort {
   background-color: lightblue;
-}
+} 
