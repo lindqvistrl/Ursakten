@@ -29,14 +29,15 @@ textarea {
 body {
   background-color: #f7f7f2;
   color: #1f4d40;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 label {
   color: #4a6a62;
-}
-
-header {
-  display: flex;
 }
 
 header {
