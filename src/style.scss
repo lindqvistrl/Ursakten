@@ -1,4 +1,12 @@
 @use "reset";
+$background-color: #f7f7f2;
+body {
+  background-color: $background-color;
+}
+
+header {
+  display: flex;
+}
 
 //Färger
 $bakgrund: #F5F6F2;
@@ -95,3 +103,4 @@ header {
   border-radius: 0.75rem;
   font-size: $font-bas;
 }
+
