@@ -110,4 +110,13 @@ header {
   border-radius: 0.75rem;
   font-size: $font-bas;
 }
+.sokfalt input:focus {
+  border-color: $accent;
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+// När muspekaren är över fältet
+.sokfalt input:hover {
+  border-color: $accent;
+}
 
