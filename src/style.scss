@@ -13,6 +13,8 @@ $text: #1F2A26;
 $accent: #1F4D40;
 $accent-sol: #E0A93B;
 $ram: #92a2ae;
+$vit: #FFFFFF;
+$radie: 0.75rem;
 
 //Fontstorlekar
 $font-body: "Helvetica Neue", Arial, sans-serif;
@@ -126,3 +128,25 @@ header {
   border-color: $accent;
 }
 
+// Knappen
+#generera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-s;
+  width: 100%;
+  padding: $spacing-s $spacing-m;
+  background-color: $accent;
+  color: $vit;
+  border: none;
+  border-radius: $radie;
+  font-size: $font-bas;
+  cursor: pointer;
+}
+// Samma maxbredd på sökfält och knapp
+.sokfalt,
+#generera {
+  max-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+}
