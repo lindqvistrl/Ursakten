@@ -28,6 +28,11 @@ textarea {
 
 body {
   background-color: #f7f7f2;
+  color: #1f4d40;
+}
+
+label {
+  color: #4a6a62;
 }
 
 header {
@@ -38,7 +43,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding: 1rem;
 }
 
@@ -48,6 +53,58 @@ header {
 
 .formularkort {
   background-color: lightblue;
+}
+
+.visuellt-dold {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sa-funkar-det ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.sa-funkar-det li {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.sa-funkar-det li + li {
+  border-left: 1px solid #92a2ae;
+}
+
+.sokfalt {
+  position: relative;
+}
+
+.sokfalt .ikon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1F4D40;
+  pointer-events: none;
+}
+
+.sokfalt input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  padding-left: 2.75rem;
+  box-sizing: border-box;
+  border: 1.5px solid #92a2ae;
+  border-radius: 0.75rem;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
