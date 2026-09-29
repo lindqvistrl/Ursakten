@@ -28,6 +28,12 @@ $spacing-m: 1rem;
 $spacing-l: 2rem;
 $spacing-xl: 4rem;
 
+//Svarsruta
+$svar-bakgrund: #ffffff;
+$svar-border: 1px solid $ram;
+$svar-radie: 0.75rem;
+$svar-padding: $spacing-m;
+
 body {
   background-color: $background-color;
   color: $text-color;
@@ -124,5 +130,17 @@ header {
 // När muspekaren är över fältet
 .sokfalt input:hover {
   border-color: $accent;
+}
+
+.svarsruta {
+  display: none;
+  background-color: $svar-bakgrund;
+  border: $svar-border;
+  border-radius: $svar-radie;
+  padding: $svar-padding;
+}
+
+.svarsruta.visas {
+  display: block;
 }
 
