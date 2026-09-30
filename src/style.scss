@@ -124,6 +124,9 @@ header {
 .sa-funkar-det li + li {
   border-left: 1px solid $ram;
 }
+.sa-funkar-det h3 {
+  margin-bottom: $spacing-s;
+}
 
 // Sökfält med ikon inuti
 .sokfalt {
@@ -222,6 +225,9 @@ main{
   text-align: center;
   padding: 0 $spacing-m;
   }
+  .plats-vader .info + .info {
+  border-left: 2px solid $ram;
+}
   .plats-vader .etikett {
   font-size: $font-liten;
   opacity: 0.7;
@@ -231,17 +237,17 @@ main{
   font-size: $font-bas;
   font-weight: 600;
 }
+
 // Hero med bakgrundsbild
 .hero {
   background-image:
-       linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6)),
-    linear-gradient(to bottom, transparent 50%, $bakgrund),
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.25)),
+    linear-gradient(to bottom, transparent 50%, $background-color),
     url("/hero.jpg");
   background-size: cover;
   background-position: center;
   padding: $spacing-xl 0;
 }
-
 // Rubrik och ingress i samma bredd som main
 .hero > * {
   width: 90%;
@@ -249,8 +255,22 @@ main{
   margin-left: auto;
   margin-right: auto;
 }
+
+// Ljus glöd bakom texten så att den syns mot bilden
 .hero h1,
 .hero .ingress {
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
   color: $text;
+}
+
+.hero .ingress {
+  font-weight: 500;
+}
+// Luft mellan rubrik och ingress
+.hero h1 {
+  margin-bottom: $spacing-s;
+}
+// Luft ovanför "Så funkar det"
+.sa-funkar-det {
+  margin-top: $spacing-s;
 }
