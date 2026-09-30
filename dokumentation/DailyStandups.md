@@ -1,5 +1,8 @@
 # Daily Standups 
 
+## 30/9
+Richard jobbar vidare med CSS.
+
 ## 29/9
 Richard, Elina har jobbat med HTML moduler under föregående dag och jobbat med några under dagen. 
 Har gått över på CSS och jobbar med de modulerna.
