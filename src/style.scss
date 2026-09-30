@@ -178,3 +178,9 @@ header {
   outline: 2px solid $accent;
   outline-offset: 3px;
 }
+//Main - huvudcontainer, centrerad på alla skärmstorlekar.
+main{
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
