@@ -81,7 +81,13 @@ span {
   }
 
 .formularkort {
-  background-color: lightblue;
+  background-color: $bakgrund-ljus;
+  border-radius: $radie;
+  padding: $spacing-l $spacing-m;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-s;
 }
 
 // Gömmer element visuellt men låter skärmläsare läsa dem.
