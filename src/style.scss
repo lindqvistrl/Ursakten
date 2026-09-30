@@ -231,3 +231,26 @@ main{
   font-size: $font-bas;
   font-weight: 600;
 }
+// Hero med bakgrundsbild
+.hero {
+  background-image:
+       linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6)),
+    linear-gradient(to bottom, transparent 50%, $bakgrund),
+    url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: $spacing-xl 0;
+}
+
+// Rubrik och ingress i samma bredd som main
+.hero > * {
+  width: 90%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero h1,
+.hero .ingress {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  color: $text;
+}
