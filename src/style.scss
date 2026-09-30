@@ -2,13 +2,12 @@
 
 
 
-$background-color: #f7f7f2;
-$text-color: #1f4d40; 
-$label-color: #4a6a62; 
-
 //Färger
- $bakgrund: #F5F6F2;
+$label-color: #4a6a62; 
+$background-color: #f7f7f2;
+$bakgrund: #F5F6F2;
 $bakgrund-ljus: #F2F2F2;
+$text-color: #1f4d40; 
 $text: #1F2A26;
 $accent: #1F4D40;
 $accent-sol: #E0A93B;
@@ -16,6 +15,7 @@ $ram: #92a2ae;
 $vit: #FFFFFF;
 $radie: 0.75rem;
 $accent-hover: #295d4d;
+
 
 //Fontstorlekar
 $font-body: "Helvetica Neue", Arial, sans-serif;
@@ -53,6 +53,7 @@ label {
 
 header {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   justify-content: center;
   background-color: $bakgrund-ljus;
@@ -61,7 +62,23 @@ header {
 
 .logo {
   background-color: lightblue;
+  display: flex;
+  align-items: center;
+  gap: $spacing-s;
+  text-decoration: none; // tar bort understrykningen på länken
 }
+
+ img {
+    height: 2.5rem; // justera efter loggan
+    width: auto;
+  }
+
+span {
+    font-family: $font-heading;
+    color: $accent; 
+    font-size: 1.5rem; // valfritt
+    font-weight: bold; // valfritt
+  }
 
 .formularkort {
   background-color: lightblue;
