@@ -173,7 +173,7 @@ header {
 #generera:hover {
   background-color: $accent-hover;
 }
-// Knappen när man tabbar till den
+// Knappen får en linje runt sig när man tabbar till den
 #generera:focus-visible {
   outline: 2px solid $accent;
   outline-offset: 3px;
