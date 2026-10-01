@@ -1,5 +1,6 @@
 import "./style.scss";
 import { hamtaPosition, hamtaVader, tolkaVader, visaVader, hamtaOrt, visaPlats } from "./vader.js";
+import { hamtaNaasSvar } from "./naas.js";
 
 const svar = document.querySelector("#svar");
 
@@ -18,14 +19,17 @@ function visaNaasSvar(data) {
 function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
   visaSvar(meddelande);
 }
-// async function hamtaOchVisaUrsakt() {
-//   try {
-//     const data = await hamtaNaasSvar();
-//     visaNaasSvar(data);
-//   } catch (fel) {
-//     visaFel(); Lägg till när #50 klar
-//   }
-// }
+async function hamtaOchVisaUrsakt() {
+  try {
+    const data = await hamtaNaasSvar();
+    visaNaasSvar(data);
+  } catch (fel) {
+    visaFel(); 
+  }
+}
+document
+  .querySelector("#generera")
+  .addEventListener("click", hamtaOchVisaUrsakt);
 
 //try {
 //  const data = await hamtaNaasSvar(); // funktionen från #50, använd rätt namn
