@@ -12,6 +12,19 @@ function doljSvar() {
   svar.textContent = "";
   svar.classList.add("is-hidden");
 }
+function visaNaasSvar(data) {
+  if (!data || !data.reason) return; // inget svar → rutan förblir dold
+  visaSvar(data.reason);
+}
+
+// function visaNaasSvar(data) {
+//   console.log(data); // tillfällig, ta bort efteråt
+//   if (!data || !data.reason) return;
+//   visaSvar(data.reason);
+// }
+// const data = await hamtaNaasSvar(); 
+// visaNaasSvar(data);
+// // funktionen från #50, byt till rätt namn
 
 // Tillfälligt test: position, sedan väder
 hamtaPosition()
@@ -20,3 +33,6 @@ hamtaPosition()
   .catch((fel) => {
     document.querySelector("#plats").textContent = fel.message;
   });
+
+  // visaNaasSvar({ reason: "Testursäkt" });  // Sätt raden längst ner i main.js, kolla att rutan visas när sidan laddas, och ta bort den sedan.
+  
