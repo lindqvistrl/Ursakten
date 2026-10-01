@@ -32,3 +32,24 @@ export async function hamtaVader(lat, lon) {
 
   return svar.json();
 }
+
+// Gör om Open-Meteos väderkod till svensk text.
+function vaderText(kod) {
+  if (kod === 0) return "Klart";
+  if (kod <= 2) return "Halvklart";
+  if (kod === 3) return "Mulet";
+  if (kod <= 48) return "Dimma";
+  if (kod <= 57) return "Duggregn";
+  if (kod <= 67) return "Regn";
+  if (kod <= 77) return "Snö";
+  if (kod <= 82) return "Regnskurar";
+  if (kod <= 86) return "Snöbyar";
+  return "Åska";
+}
+// Plockar ut temperatur och väderbeskrivning ur svaret från Open-Meteo.
+export function tolkaVader(data) {
+  return {
+    temperatur: Math.round(data.current.temperature_2m),
+    beskrivning: vaderText(data.current.weather_code),
+  };
+}
