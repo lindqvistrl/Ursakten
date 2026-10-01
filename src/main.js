@@ -1,6 +1,7 @@
 import "./style.scss";
 import { hamtaPosition, hamtaVader, tolkaVader, visaVader, hamtaOrt, visaPlats } from "./vader.js";
 import { hamtaNaasSvar } from "./naas.js";
+import { startaLaddning, stoppaLaddning } from "./knapp.js";
 
 const svar = document.querySelector("#svar");
 
@@ -24,11 +25,14 @@ function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
   visaSvar(meddelande);
 }
 async function hamtaOchVisaUrsakt() {
+  startaLaddning();
   try {
     const data = await hamtaNaasSvar();
     visaNaasSvar(data);
   } catch (fel) {
-    visaFel(); 
+    visaFel();
+  } finally {
+    stoppaLaddning();
   }
 }
 document
