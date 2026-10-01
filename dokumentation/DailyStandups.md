@@ -6,6 +6,10 @@ Yanica: Jag har igår uppdaterat min Daily Standup i dokumentation mappen i proj
 ## 30/9
 Yanica: Fick gjort en pull request igår och merge min branch in till main sen därefter så kikade jag lite på JavaScript. Idag är tanken att jag ska fortsätta med Javascript och skapa en ny branch att fortsätta med. Möjligt att jag börjar med någon "ready uppgift" som knappfunktion eller inputfunktion. Jag kommer även att skriva in Daily Standup i dokumentation mappen i projektet samt lägga till en logo i header till projektet som togs bort igår när jag gjorde min merge. 
 
+## 1/10
+Vi blev färdiga med css igår. 
+Vi jobbar med Javascript.
+
 ## 30/9
 Richard jobbar vidare med CSS.
 

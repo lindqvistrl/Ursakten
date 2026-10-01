@@ -53,7 +53,6 @@ label {
 
 header {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   justify-content: center;
   background-color: $bakgrund-ljus;
@@ -159,18 +158,32 @@ header {
 .sokfalt input:hover {
   border-color: $accent;
 }
-
 .svarsruta {
-  display: none;
   background-color: $svar-bakgrund;
   border: $svar-border;
   border-radius: $svar-radie;
   padding: $svar-padding;
 }
 
-.svarsruta.visas {
-  display: block;
+.svarsruta.is-hidden {
+  display: none;
 }
+
+// .svarsruta {
+//   display: none;
+//   background-color: $svar-bakgrund;
+//   border: $svar-border;
+//   border-radius: $svar-radie;
+//   padding: $svar-padding;
+// }
+
+// .svarsruta.visas {
+//   display: block;
+// }
+
+// .svarsruta.is-hidden {
+//   display: none;
+// }
 
 // Knappen
 #generera {
@@ -272,4 +285,63 @@ main{
 // Luft ovanför "Så funkar det"
 .sa-funkar-det {
   margin-top: $spacing-s;
+}
+
+// Citatblock
+.citat-block {
+  width: 90%;
+  max-width: 40rem;
+  margin: $spacing-l auto;
+  padding: $spacing-l;
+  background-color: $bakgrund-ljus;
+  border-radius: $radie;
+
+  blockquote {
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "“";
+      font-family: $font-heading;
+      font-size: 4rem;
+      line-height: 1;
+      margin-right: $spacing-m;
+      color: $accent;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-family: $font-heading;
+    font-size: $font-stor;
+  }
+}
+
+// Footer
+.site-footer {
+  width: 90%;
+  max-width: 40rem;
+  margin: $spacing-l auto;
+  padding: $spacing-l $spacing-m;
+  background-color: $bakgrund-ljus;
+  border-radius: $radie;
+  text-align: center;
+
+  p {
+    margin: 0;
+    color: $text-color;
+    font-size: $font-liten;
+  }
+}
+
+// Desktop
+@media (min-width: 768px) {
+  .site-footer {
+    padding: $spacing-l;
+
+    p {
+      font-size: $font-bas;
+    }
+  }
 }
