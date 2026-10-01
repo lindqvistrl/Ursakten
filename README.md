@@ -23,3 +23,12 @@ npm run dev
 
 <img width="930" height="1077" alt="Wireframe av appen" src="https://github.com/user-attachments/assets/3ee2e34f-e0da-411e-8ad8-3e65bb54ac46" />
 
+## Personuppgifter
+
+Appen frågar efter din position för att visa väder och ort. Positionen skickas till två externa tjänster:
+
+- **Open-Meteo**, för att hämta vädret.
+- **BigDataCloud**, för att ta fram ortnamnet. BigDataCloud ser också din IP-adress.
+
+Vi sparar ingenting. Nekar du positionen fungerar appen ändå, men utan väder och ort.
+
