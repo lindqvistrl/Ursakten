@@ -1,5 +1,9 @@
 # Daily Standups 
 
+## 1/10
+Vi blev färdiga med css igår. 
+Vi jobbar med Javascript.
+
 ## 30/9
 Richard jobbar vidare med CSS.
 
