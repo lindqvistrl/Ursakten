@@ -1,6 +1,6 @@
 import "./style.scss";
-import { hamtaPosition, hamtaVader, tolkaVader } from "./vader.js";
-// import { hamtaNaasSvar } from "./naas.js"; Lägg till när #50 finns
+import { hamtaPosition, hamtaVader, tolkaVader, visaVader, hamtaOrt, visaPlats } from "./vader.js";
+
 const svar = document.querySelector("#svar");
 
 function visaSvar(text) {
@@ -34,7 +34,7 @@ function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
  // visaFel();
 //}
 // if (!response.ok) {
-  throw new Error("NaaS svarade inte");
+//  throw new Error("NaaS svarade inte");
 //}
 //try mm tillhör kort #50, ta bort när #50 är klar
 
@@ -47,10 +47,18 @@ function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
 // visaNaasSvar(data);
 // // funktionen från #50, byt till rätt namn
 
-// Tillfälligt test: position, sedan väder
+// Hämtar position, väder och ort, och skriver ut dem i formulärkortet.
 hamtaPosition()
-  .then((position) => hamtaVader(position.lat, position.lon))
-  .then((vader) => console.log(tolkaVader(vader)))
+  .then((position) => {
+    return Promise.all([
+      hamtaVader(position.lat, position.lon),
+      hamtaOrt(position.lat, position.lon)
+    ]);
+  })
+  .then(([vader, ort]) => {
+    visaVader(tolkaVader(vader));
+    visaPlats(ort);
+  })
   .catch((fel) => {
     document.querySelector("#plats").textContent = fel.message;
   });

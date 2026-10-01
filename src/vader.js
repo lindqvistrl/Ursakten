@@ -6,7 +6,6 @@ export function hamtaPosition() {
       reject(new Error("Webbläsaren kan inte ta fram din position."));
       return;
     }
-
     navigator.geolocation.getCurrentPosition(
       (position) => {
         resolve({
@@ -14,8 +13,20 @@ export function hamtaPosition() {
           lon: position.coords.longitude,
         });
       },
-      () => {
-        reject(new Error("Du nekade åtkomst till din position."));
+
+// Om det går fel: användaren nekade, eller positionen hittades inte.
+      (fel) => {
+        if (fel.code === 1) {
+          reject(new Error("Du nekade åtkomst till din position."));
+        } else {
+          reject(new Error("Kunde inte ta fram din position."));
+        }
+      },
+// Återanvänder en position som är upp till 10 minuter gammal, så att det går snabbare.
+      {
+        enableHighAccuracy: false,
+        maximumAge: 600000,
+        timeout: 10000,
       }
     );
   });
@@ -52,4 +63,27 @@ export function tolkaVader(data) {
     temperatur: Math.round(data.current.temperature_2m),
     beskrivning: vaderText(data.current.weather_code),
   };
+}
+// Skriver ut temperatur och väder under "Väder" i formulärkortet.
+export function visaVader(vader) {
+  document.querySelector("#vader").textContent =
+    `${vader.temperatur}°C, ${vader.beskrivning}`;
+}
+
+// Skriver ut ortnamnet under "Din plats" i formulärkortet.
+export function visaPlats(ort) {
+  document.querySelector("#plats").textContent = ort;
+}
+// Hämtar ortnamn från koordinaterna via BigDataCloud.
+export async function hamtaOrt(lat, lon) {
+  const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=sv`;
+
+  const svar = await fetch(url);
+
+  if (!svar.ok) {
+    throw new Error("Kunde inte hämta ortnamn.");
+  }
+
+  const data = await svar.json();
+  return data.city || data.locality || "Okänd plats";
 }
