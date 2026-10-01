@@ -7,7 +7,6 @@ function visaSvar(text) {
   svar.textContent = text;
   svar.classList.remove("is-hidden");
 }
-
 function doljSvar() {
   svar.textContent = "";
   svar.classList.add("is-hidden");
@@ -16,6 +15,28 @@ function visaNaasSvar(data) {
   if (!data || !data.reason) return; // inget svar → rutan förblir dold
   visaSvar(data.reason);
 }
+function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
+  visaSvar(meddelande);
+}
+// async function hamtaOchVisaUrsakt() {
+//   try {
+//     const data = await hamtaNaasSvar();
+//     visaNaasSvar(data);
+//   } catch (fel) {
+//     visaFel(); Lägg till när #50 klar
+//   }
+// }
+
+//try {
+//  const data = await hamtaNaasSvar(); // funktionen från #50, använd rätt namn
+ // visaNaasSvar(data);
+//} catch (fel) {
+ // visaFel();
+//}
+// if (!response.ok) {
+//  throw new Error("NaaS svarade inte");
+//}
+//try mm tillhör kort #50, ta bort när #50 är klar
 
 // function visaNaasSvar(data) {
 //   console.log(data); // tillfällig, ta bort efteråt
