@@ -69,3 +69,21 @@ export function visaVader(vader) {
   document.querySelector("#vader").textContent =
     `${vader.temperatur}°C, ${vader.beskrivning}`;
 }
+
+// Skriver ut ortnamnet under "Din plats" i formulärkortet.
+export function visaPlats(ort) {
+  document.querySelector("#plats").textContent = ort;
+}
+// Hämtar ortnamn från koordinaterna via BigDataCloud.
+export async function hamtaOrt(lat, lon) {
+  const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=sv`;
+
+  const svar = await fetch(url);
+
+  if (!svar.ok) {
+    throw new Error("Kunde inte hämta ortnamn.");
+  }
+
+  const data = await svar.json();
+  return data.city || data.locality || "Okänd plats";
+}
