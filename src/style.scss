@@ -278,6 +278,37 @@ main{
   margin-top: $spacing-s;
 }
 
+// Citatblock
+.citat-block {
+  width: 90%;
+  max-width: 40rem;
+  margin: $spacing-l auto;
+  padding: $spacing-l;
+  background-color: $bakgrund-ljus;
+  border-radius: $radie;
+
+  blockquote {
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "“";
+      font-family: $font-heading;
+      font-size: 4rem;
+      line-height: 1;
+      margin-right: $spacing-m;
+      color: $accent;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-family: $font-heading;
+    font-size: $font-stor;
+  }
+}
+
 // Footer
 .site-footer {
   width: 90%;
