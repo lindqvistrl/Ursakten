@@ -20,3 +20,15 @@ export function hamtaPosition() {
     );
   });
 }
+// Hämtar aktuellt väder från Open-Meteo för en position.
+export async function hamtaVader(lat, lon) {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
+
+  const svar = await fetch(url);
+
+  if (!svar.ok) {
+    throw new Error("Kunde inte hämta vädret.");
+  }
+
+  return svar.json();
+}
