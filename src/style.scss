@@ -161,15 +161,10 @@ header {
 }
 
 .svarsruta {
-  display: none;
   background-color: $svar-bakgrund;
   border: $svar-border;
   border-radius: $svar-radie;
   padding: $svar-padding;
-}
-
-.svarsruta.visas {
-  display: block;
 }
 
 .svarsruta.is-hidden {
