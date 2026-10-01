@@ -1,4 +1,7 @@
-# Daily Standups 
+# Daily Standups
+
+## 1/10
+Yanica: Jag har igår uppdaterat min Daily Standup i dokumentation mappen i projektet och lagt till en logo som togs bort vid merge. Jag har skapat en ny branch utifrån en "ready uppgift" där jag med JavaScript hämtar värdet från inputfältet genom knapptryck bla. Jag kommer att fortsätta med påbörja interaktionen med API Naas.
 
 ## 30/9
 Yanica: Fick gjort en pull request igår och merge min branch in till main sen därefter så kikade jag lite på JavaScript. Idag är tanken att jag ska fortsätta med Javascript och skapa en ny branch att fortsätta med. Möjligt att jag börjar med någon "ready uppgift" som knappfunktion eller inputfunktion. Jag kommer även att skriva in Daily Standup i dokumentation mappen i projektet samt lägga till en logo i header till projektet som togs bort igår när jag gjorde min merge. 
