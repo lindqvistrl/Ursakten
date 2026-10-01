@@ -59,6 +59,10 @@ document
 // visaNaasSvar(data);
 // // funktionen från #50, byt till rätt namn
 
+// Visar laddningssymbol medan plats och väder hämtas
+document.querySelector("#plats").classList.add("laddar");
+document.querySelector("#vader").classList.add("laddar");
+
 // Hämtar position, väder och ort, och skriver ut dem i formulärkortet.
 hamtaPosition()
   .then((position) => {
@@ -73,8 +77,11 @@ hamtaPosition()
   })
   .catch((fel) => {
     document.querySelector("#plats").textContent = fel.message;
+  })
+  .finally(() => {
+    document.querySelector("#plats").classList.remove("laddar");
+    document.querySelector("#vader").classList.remove("laddar");
   });
-
 
 
 

@@ -345,3 +345,20 @@ main{
     }
   }
 }
+// Snurrande laddningssymbol, visas när ett element har klassen laddar
+.laddar::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid $ram;
+  border-top-color: $accent;
+  border-radius: 50%;
+  animation: snurra 0.8s linear infinite;
+}
+
+@keyframes snurra {
+  to {
+    transform: rotate(360deg);
+  }
+}
