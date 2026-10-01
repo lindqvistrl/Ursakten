@@ -3,9 +3,13 @@ import { hamtaPosition, hamtaVader, tolkaVader, visaVader, hamtaOrt, visaPlats }
 
 const svar = document.querySelector("#svar");
 
+// Visar svarsrutan först och skriver in texten strax efter,
+// så att skärmläsare hinner märka rutan och läser upp svaret.
 function visaSvar(text) {
-  svar.textContent = text;
   svar.classList.remove("is-hidden");
+  setTimeout(() => {
+    svar.textContent = text;
+  }, 50);
 }
 function doljSvar() {
   svar.textContent = "";
@@ -64,4 +68,5 @@ hamtaPosition()
   });
 
   // visaNaasSvar({ reason: "Testursäkt" });  // Sätt raden längst ner i main.js, kolla att rutan visas när sidan laddas, och ta bort den sedan.
+  
   
