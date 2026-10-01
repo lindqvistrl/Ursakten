@@ -173,6 +173,10 @@ header {
   display: block;
 }
 
+.svarsruta.is-hidden {
+  display: none;
+}
+
 // Knappen
 #generera {
   display: flex;
