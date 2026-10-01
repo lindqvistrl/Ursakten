@@ -259,6 +259,7 @@ main{
   background-size: cover;
   background-position: center;
   padding: $spacing-xl 0;
+  text-align: center;
 }
 // Rubrik och ingress i samma bredd som main
 .hero > * {
@@ -277,6 +278,7 @@ main{
 
 .hero .ingress {
   font-weight: 500;
+  max-width: fit-content;
 }
 // Luft mellan rubrik och ingress
 .hero h1 {

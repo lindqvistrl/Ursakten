@@ -1,15 +1,18 @@
 # Daily Standups
 
+## 2/10
+Jag har igår hämtat uppdateringar från main och gjort en pull request på min senaste branch som var input/knapp uppgifter. Därefter fortsatte jag med en ny branch där jag la till att det inte går att få fram data från Naas API om inputfältet är tomt bla. Jag kommer att fortsätta kika på JavaScript samt API idag.
+
 ## 1/10
 Yanica: Jag har igår uppdaterat min Daily Standup i dokumentation mappen i projektet och lagt till en logo som togs bort vid merge. Jag har skapat en ny branch utifrån en "ready uppgift" där jag med JavaScript hämtar värdet från inputfältet genom knapptryck bla. Jag kommer att fortsätta med och kika på interaktionen med API Naas.
 Elina: jobbar med js kort
 
-## 30/9
-Yanica: Fick gjort en pull request igår och merge min branch in till main sen därefter så kikade jag lite på JavaScript. Idag är tanken att jag ska fortsätta med Javascript och skapa en ny branch att fortsätta med. Möjligt att jag börjar med någon "ready uppgift" som knappfunktion eller inputfunktion. Jag kommer även att skriva in Daily Standup i dokumentation mappen i projektet samt lägga till en logo i header till projektet som togs bort igår när jag gjorde min merge. 
-
 ## 1/10
 Vi blev färdiga med css igår. 
 Vi jobbar med Javascript.
+
+## 30/9
+Yanica: Fick gjort en pull request igår och merge min branch in till main sen därefter så kikade jag lite på JavaScript. Idag är tanken att jag ska fortsätta med Javascript och skapa en ny branch att fortsätta med. Möjligt att jag börjar med någon "ready uppgift" som knappfunktion eller inputfunktion. Jag kommer även att skriva in Daily Standup i dokumentation mappen i projektet samt lägga till en logo i header till projektet som togs bort igår när jag gjorde min merge. 
 
 ## 30/9
 Richard jobbar vidare med CSS.
