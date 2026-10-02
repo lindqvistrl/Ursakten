@@ -242,7 +242,7 @@ main{
 }
   .plats-vader .etikett {
   font-size: $font-liten;
-  opacity: 0.7;
+  $label-color: $label-color;
 }
 
 .plats-vader .varde {
