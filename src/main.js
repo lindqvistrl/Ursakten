@@ -15,10 +15,12 @@ function visaSvar(text) {
     svar.textContent = text;
   }, 50);
 }
+
 function doljSvar() {
   svar.textContent = "";
   svar.classList.add("is-hidden");
 }
+
 function visaNaasSvar(data, aktivitet) {
   if (!data || !data.reason) return;
 
@@ -32,96 +34,81 @@ function visaNaasSvar(data, aktivitet) {
 
   visaSvar(text);
 }
+
 function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
   visaSvar(meddelande);
 }
-async function hamtaOchVisaUrsakt() {
-  const input = document.getElementById("undvika").value.trim();
 
-  if (input === "") {
+async function hamtaOchVisaUrsakt() {
+  const aktivitet = document.getElementById("undvika").value.trim();
+
+  if (aktivitet === "") {
     return;
   }
 
   startaLaddning();
   try {
     const data = await hamtaNaasSvar();
-    visaNaasSvar(data, input);
+    visaNaasSvar(data, aktivitet);
   } catch (fel) {
     visaFel();
   } finally {
     stoppaLaddning();
   }
-
 }
-document
-  .querySelector("#generera")
-  .addEventListener("click", hamtaOchVisaUrsakt);
-
-//try {
-//  const data = await hamtaNaasSvar(); // funktionen från #50, använd rätt namn
-// visaNaasSvar(data);
-//} catch (fel) {
-// visaFel();
-//}
-// if (!response.ok) {
-//  throw new Error("NaaS svarade inte");
-//}
-//try mm tillhör kort #50, ta bort när #50 är klar
-
-// function visaNaasSvar(data) {
-//   console.log(data); // tillfällig, ta bort efteråt
-//   if (!data || !data.reason) return;
-//   visaSvar(data.reason);
-// }
-// const data = await hamtaNaasSvar(); 
-// visaNaasSvar(data);
-// // funktionen från #50, byt till rätt namn
-
-// Visar laddningssymbol medan plats och väder hämtas
-document.querySelector("#plats").classList.add("laddar");
-document.querySelector("#vader").classList.add("laddar");
 
 // Hämtar position, väder och ort, och skriver ut dem i formulärkortet.
-hamtaPosition()
-  .then((position) => {
-    return Promise.all([
-      hamtaVader(position.lat, position.lon),
-      hamtaOrt(position.lat, position.lon)
-    ]);
-  })
-  .then(([vader, ort]) => {
-    aktuelltVader = tolkaVader(vader);
-    aktuellOrt = ort;
+function startaVader() {
+  const platsElement = document.querySelector("#plats");
+  const vaderElement = document.querySelector("#vader");
 
-    visaVader(aktuelltVader);
-    visaPlats(aktuellOrt);
-  })
-  .catch((fel) => {
-    document.querySelector("#plats").textContent = fel.message;
-  })
-  .finally(() => {
-    document.querySelector("#plats").classList.remove("laddar");
-    document.querySelector("#vader").classList.remove("laddar");
-  });
+  platsElement.classList.add("laddar");
+  vaderElement.classList.add("laddar");
 
+  hamtaPosition()
+    .then((position) => {
+      return Promise.all([
+        hamtaVader(position.lat, position.lon),
+        hamtaOrt(position.lat, position.lon),
+      ]);
+    })
+    .then(([vader, ort]) => {
+      aktuelltVader = tolkaVader(vader);
+      aktuellOrt = ort;
+      visaVader(aktuelltVader);
+      visaPlats(aktuellOrt);
+    })
+    .catch((fel) => {
+      platsElement.textContent = fel.message;
+    })
+    .finally(() => {
+      platsElement.classList.remove("laddar");
+      vaderElement.classList.remove("laddar");
+    });
+}
 
+// Allt som ska hända när sidan laddas.
+function init() {
+  startaVader();
+  document.querySelector("#generera").addEventListener("click", hamtaOchVisaUrsakt);
+}
+
+init();
+
+// Enter och tömning av fältet.
 const input = document.querySelector("#undvika");
 const knapp = document.querySelector("#generera");
 
 knapp.addEventListener("click", function () {
-
   if (input.value.trim() === "") {
     alert("Vänligen skriv in något du vill undvika.");
     return;
   }
   input.value = "";
-})
+});
 
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     knapp.click();
   }
 });
-// visaNaasSvar({ reason: "Testursäkt" });  // Sätt raden längst ner i main.js, kolla att rutan visas när sidan laddas, och ta bort den sedan.
-
-
