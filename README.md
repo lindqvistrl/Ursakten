@@ -42,7 +42,7 @@ Vi sparar ingenting. Nekar du positionen fungerar appen ändå, men utan väder 
 
 ### Mobil
 
-![Ursäkten på mobil](screenshots/mobile.png)
+![Ursäkten på mobil](screenshots/mobil.png)
 
 ## Deltagare
 
