@@ -4,6 +4,8 @@ import { hamtaNaasSvar } from "./naas.js";
 import { startaLaddning, stoppaLaddning } from "./knapp.js";
 
 const svar = document.querySelector("#svar");
+let aktuelltVader = null;
+let aktuellOrt = "";
 
 // Visar svarsrutan först och skriver in texten strax efter,
 // så att skärmläsare hinner märka rutan och läser upp svaret.
@@ -17,9 +19,18 @@ function doljSvar() {
   svar.textContent = "";
   svar.classList.add("is-hidden");
 }
-function visaNaasSvar(data) {
-  if (!data || !data.reason) return; // inget svar → rutan förblir dold
-  visaSvar(data.reason);
+function visaNaasSvar(data, aktivitet) {
+  if (!data || !data.reason) return;
+
+  let text = `Du vill undvika ${aktivitet}.`;
+
+  if (aktuelltVader && aktuellOrt) {
+    text += ` I ${aktuellOrt} är det ${aktuelltVader.temperatur}°C och ${aktuelltVader.beskrivning.toLowerCase()}, så du kan använda den här ursäkten: ${data.reason}`;
+  } else {
+    text += ` Du kan använda den här ursäkten: ${data.reason}`;
+  }
+
+  visaSvar(text);
 }
 function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
   visaSvar(meddelande);
@@ -34,7 +45,7 @@ async function hamtaOchVisaUrsakt() {
   startaLaddning();
   try {
     const data = await hamtaNaasSvar();
-    visaNaasSvar(data);
+visaNaasSvar(data, input);
   } catch (fel) {
     visaFel();
   } finally {
@@ -79,9 +90,12 @@ hamtaPosition()
     ]);
   })
   .then(([vader, ort]) => {
-    visaVader(tolkaVader(vader));
-    visaPlats(ort);
-  })
+  aktuelltVader = tolkaVader(vader);
+  aktuellOrt = ort;
+
+  visaVader(aktuelltVader);
+  visaPlats(aktuellOrt);
+})
   .catch((fel) => {
     document.querySelector("#plats").textContent = fel.message;
   })
