@@ -25,6 +25,12 @@ function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
   visaSvar(meddelande);
 }
 async function hamtaOchVisaUrsakt() {
+  const input = document.getElementById("undvika").value.trim();
+
+  if (input === "") {
+    return;
+  }
+  
   startaLaddning();
   try {
     const data = await hamtaNaasSvar();
@@ -34,6 +40,7 @@ async function hamtaOchVisaUrsakt() {
   } finally {
     stoppaLaddning();
   }
+  
 }
 document
   .querySelector("#generera")
@@ -41,9 +48,9 @@ document
 
 //try {
 //  const data = await hamtaNaasSvar(); // funktionen från #50, använd rätt namn
- // visaNaasSvar(data);
+// visaNaasSvar(data);
 //} catch (fel) {
- // visaFel();
+// visaFel();
 //}
 // if (!response.ok) {
 //  throw new Error("NaaS svarade inte");
@@ -84,29 +91,22 @@ hamtaPosition()
   });
 
 
-
-
 const input = document.querySelector("#undvika");
 const knapp = document.querySelector("#generera");
 
-
 knapp.addEventListener("click", function () {
 
-  const inputText = input.value;
-
   if (input.value.trim() === "") {
-    console.warn("Varning: inputfältet är tomt!");
-  } else {
-    console.log("Användaren vill undvika:", inputText);
+    alert("Vänligen skriv in något du vill undvika.");
   }
   input.value = "";
 })
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        knapp.click();
-    }
+  if (event.key === "Enter") {
+    knapp.click();
+  }
 });
-  // visaNaasSvar({ reason: "Testursäkt" });  // Sätt raden längst ner i main.js, kolla att rutan visas när sidan laddas, och ta bort den sedan.
-  
-  
+// visaNaasSvar({ reason: "Testursäkt" });  // Sätt raden längst ner i main.js, kolla att rutan visas när sidan laddas, och ta bort den sedan.
+
+
