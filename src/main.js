@@ -4,6 +4,8 @@ import { hamtaNaasSvar } from "./naas.js";
 import { startaLaddning, stoppaLaddning } from "./knapp.js";
 
 const svar = document.querySelector("#svar");
+const input = document.querySelector("#undvika");
+const knapp = document.querySelector("#generera");
 let aktuelltVader = null;
 let aktuellOrt = "";
 
@@ -40,12 +42,14 @@ function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
 }
 
 async function hamtaOchVisaUrsakt() {
-  const aktivitet = document.getElementById("undvika").value.trim();
+  const aktivitet = input.value.trim();
 
   if (aktivitet === "") {
+    alert("Vänligen skriv in något du vill undvika.");
     return;
   }
 
+  input.value = "";
   startaLaddning();
   try {
     const data = await hamtaNaasSvar();
@@ -90,25 +94,14 @@ function startaVader() {
 // Allt som ska hända när sidan laddas.
 function init() {
   startaVader();
-  document.querySelector("#generera").addEventListener("click", hamtaOchVisaUrsakt);
+  knapp.addEventListener("click", hamtaOchVisaUrsakt);
+
+  // Enter i fältet gör samma sak som att klicka på knappen.
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      hamtaOchVisaUrsakt();
+    }
+  });
 }
 
 init();
-
-// Enter och tömning av fältet.
-const input = document.querySelector("#undvika");
-const knapp = document.querySelector("#generera");
-
-knapp.addEventListener("click", function () {
-  if (input.value.trim() === "") {
-    alert("Vänligen skriv in något du vill undvika.");
-    return;
-  }
-  input.value = "";
-});
-
-input.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    knapp.click();
-  }
-});
