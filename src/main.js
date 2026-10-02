@@ -95,18 +95,19 @@ function init() {
 
 init();
 
-// Enter och tömning av fältet. 
+// Enter och tömning av fältet.
 const input = document.querySelector("#undvika");
 const knapp = document.querySelector("#generera");
 
 knapp.addEventListener("click", function () {
   if (input.value.trim() === "") {
     alert("Vänligen skriv in något du vill undvika.");
+    return;
   }
   input.value = "";
 });
 
-document.addEventListener("keydown", (event) => {
+input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     knapp.click();
   }
