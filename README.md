@@ -34,3 +34,9 @@ Appen frågar efter din position för att visa väder och ort. Positionen skicka
 
 Vi sparar ingenting. Nekar du positionen fungerar appen ändå, men utan väder och ort.
 
+## Deltagare
+
+- [Richard Lindqvist](https://github.com/lindqvistrl)
+- [Elina Aspman](https://github.com/ElinaAspman)
+- [Dennis Kvarnström](https://github.com/DEKV1)
+- [Yanica Svensson](https://github.com/sweets86)
