@@ -41,17 +41,17 @@ async function hamtaOchVisaUrsakt() {
   if (input === "") {
     return;
   }
-  
+
   startaLaddning();
   try {
     const data = await hamtaNaasSvar();
-visaNaasSvar(data, input);
+    visaNaasSvar(data, input);
   } catch (fel) {
     visaFel();
   } finally {
     stoppaLaddning();
   }
-  
+
 }
 document
   .querySelector("#generera")
@@ -90,12 +90,12 @@ hamtaPosition()
     ]);
   })
   .then(([vader, ort]) => {
-  aktuelltVader = tolkaVader(vader);
-  aktuellOrt = ort;
+    aktuelltVader = tolkaVader(vader);
+    aktuellOrt = ort;
 
-  visaVader(aktuelltVader);
-  visaPlats(aktuellOrt);
-})
+    visaVader(aktuelltVader);
+    visaPlats(aktuellOrt);
+  })
   .catch((fel) => {
     document.querySelector("#plats").textContent = fel.message;
   })
@@ -112,11 +112,12 @@ knapp.addEventListener("click", function () {
 
   if (input.value.trim() === "") {
     alert("Vänligen skriv in något du vill undvika.");
+    return;
   }
   input.value = "";
 })
 
-document.addEventListener("keydown", (event) => {
+input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     knapp.click();
   }
