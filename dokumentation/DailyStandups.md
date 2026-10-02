@@ -7,6 +7,8 @@ Dennis har jobbat med JavaScript och kombinerat användarens input, väder/plats
 
 Richard har ordnat med prestanda och tillgänglighet. Lagt till init till programmet. 
 
+Elina går igenom grupparbetes instruktioner och skapar nya uppgiter i backloggen så vi har koll innan inlämning.
+
 ## 1/10
 Yanica: Jag har igår uppdaterat min Daily Standup i dokumentation mappen i projektet och lagt till en logo som togs bort vid merge. Jag har skapat en ny branch utifrån en "ready uppgift" där jag med JavaScript hämtar värdet från inputfältet genom knapptryck bla. Jag kommer att fortsätta med och kika på interaktionen med API Naas.
 Elina: jobbar med js kort
