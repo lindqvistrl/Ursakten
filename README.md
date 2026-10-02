@@ -4,7 +4,7 @@ En webbapp som hjälper dig att slippa göra saker.
 
 ## Vad den gör
 
-Skriv in vad du vill undvika. Appen hämtar en ursäkt från NaaS API och väderdata från SMHI baserat på din plats, och kombinerar dem till ett personligt svar på varför du inte borde göra det.
+Skriv in vad du vill undvika. Appen hämtar en ursäkt från NaaS API och väderdata från Open-Meteo baserat på din plats, och kombinerar dem till ett personligt svar på varför du inte borde göra det.
 
 ## Byggd med
 
