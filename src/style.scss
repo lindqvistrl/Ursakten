@@ -110,6 +110,8 @@ header {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
+  gap: $spacing-m;
 }
 
 //Stegen delar bredden lika, texten centrerad
@@ -119,9 +121,6 @@ header {
   padding: 0 $spacing-m;
 }
 
-.sa-funkar-det li + li {
-  border-left: 1px solid $ram;
-}
 .sa-funkar-det h3 {
   margin-bottom: $spacing-s;
 }
@@ -364,3 +363,13 @@ main{
     transform: rotate(360deg);
   }
 }
+@media (min-width: 390px) {
+  .sa-funkar-det ol {
+    flex-direction: row;
+    gap: 0;
+  }
+  .sa-funkar-det li + li {
+  border-left: 1px solid $ram;
+}
+}
+
