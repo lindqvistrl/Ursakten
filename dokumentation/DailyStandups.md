@@ -1,5 +1,9 @@
 # Daily Standups
 
+## 5/10
+
+Elina: Har gjort ett kort, granskar sidan och hittade på en ny uppgift med finjustering. Lagt i backloggen.
+
 ## 2/10
 Jag har igår hämtat uppdateringar från main och gjort en pull request på min senaste branch som var input/knapp uppgifter. Därefter fortsatte jag med en ny branch där jag la till att det inte går att få fram data från Naas API om inputfältet är tomt bla. Jag kommer att fortsätta kika på JavaScript samt API idag.
 
