@@ -41,11 +41,21 @@ function visaFel(meddelande = "Något gick fel. Försök igen om en stund.") {
   visaSvar(meddelande);
 }
 
+function visaSvarMeddelande(meddelande) {
+  svar.textContent = meddelande;
+  svar.classList.remove("is-hidden");
+
+  // Starta om animationen varje gång
+  svar.classList.remove("visas-igen");
+  void svar.offsetWidth;
+  svar.classList.add("visas-igen");
+}
+
 async function hamtaOchVisaUrsakt() {
   const aktivitet = input.value.trim();
 
   if (aktivitet === "") {
-    alert("Vänligen skriv in något du vill undvika.");
+    visaSvarMeddelande("Skriv vad du vill undvika.");
     return;
   }
 
