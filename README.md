@@ -85,16 +85,6 @@ Appen frågar efter din position för att visa väder och ort. Positionen skicka
 
 Vi sparar ingenting. Nekar du positionen fungerar appen ändå, men utan väder och ort.
 
-## Förhandsvisning
-
-### Desktop
-
-![Ursäkten på desktop](screenshots/desktop.png)
-
-### Mobil
-
-<img src="screenshots/mobil.png" alt="Ursäkten – mobilversion" width="300">
-
 ## Deltagare
 
 - [Richard Lindqvist](https://github.com/lindqvistrl)
