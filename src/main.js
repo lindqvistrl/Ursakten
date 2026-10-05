@@ -6,6 +6,12 @@ import { startaLaddning, stoppaLaddning } from "./knapp.js";
 const svar = document.querySelector("#svar");
 const input = document.querySelector("#undvika");
 const knapp = document.querySelector("#generera");
+const FEL = {
+  plats: "Vi kunde inte avgöra var du befinner dig, så vi kör utan plats.",
+  vader: "Vädret kunde inte bestämmas eftersom vi inte kunde ansluta till Open-Meteo.",
+  vaderUtanPlats: "Vädret kunde inte bestämmas eftersom vi inte vet var du befinner dig.",
+  ursakt: "Du får komma på en egen ursäkt att säga nej, för API:et verkar ligga nere…",
+};
 let aktuelltVader = null;
 let aktuellOrt = "";
 
@@ -24,7 +30,9 @@ function doljSvar() {
 }
 
 function visaNaasSvar(data, aktivitet) {
-  if (!data || !data.reason) return;
+ if (!data || !data.reason) {
+  throw new Error("Tomt svar från NaaS");
+}
 
   let text = `Du vill undvika ${aktivitet}.`;
 
@@ -54,8 +62,8 @@ async function hamtaOchVisaUrsakt() {
   try {
     const data = await hamtaNaasSvar();
     visaNaasSvar(data, aktivitet);
-  } catch (fel) {
-    visaFel();
+  } catch (fel) { console.error(fel);
+    visaFel(FEL.ursakt);
   } finally {
     stoppaLaddning();
   }
@@ -71,26 +79,46 @@ function startaVader() {
 
   hamtaPosition()
     .then((position) => {
-      return Promise.all([
+      return Promise.allSettled([
         hamtaVader(position.lat, position.lon),
         hamtaOrt(position.lat, position.lon),
       ]);
     })
-    .then(([vader, ort]) => {
-      aktuelltVader = tolkaVader(vader);
-      aktuellOrt = ort;
-      visaVader(aktuelltVader);
-      visaPlats(aktuellOrt);
+    .then(([vaderRes, ortRes]) => {
+      // Vädret
+      if (vaderRes.status === "fulfilled") {
+        try {
+          aktuelltVader = tolkaVader(vaderRes.value);
+          visaVader(aktuelltVader);
+        } catch (fel) {
+          console.error(fel);
+          vaderElement.textContent = FEL.vader;
+        }
+      } else {
+        console.error(vaderRes.reason);
+        vaderElement.textContent = FEL.vader;
+      }
+
+      // Platsen
+      if (ortRes.status === "fulfilled") {
+        aktuellOrt = ortRes.value;
+        visaPlats(aktuellOrt);
+      } else {
+        console.error(ortRes.reason);
+        platsElement.textContent = FEL.plats;
+      }
     })
     .catch((fel) => {
-      platsElement.textContent = fel.message;
+      // Hit kommer vi bara om själva positionen misslyckas
+      console.error(fel);
+      platsElement.textContent = `${fel.message} ${FEL.plats}`;
+      vaderElement.textContent = FEL.vaderUtanPlats;
     })
     .finally(() => {
       platsElement.classList.remove("laddar");
       vaderElement.classList.remove("laddar");
     });
 }
-
 // Allt som ska hända när sidan laddas.
 function init() {
   startaVader();
