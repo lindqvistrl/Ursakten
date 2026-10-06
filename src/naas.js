@@ -1,7 +1,8 @@
 const NAAS_URL = "https://naas.isalman.dev/no";
 
 export async function hamtaNaasSvar() {
-  const response = await fetch(NAAS_URL);
+  const response = await fetch(NAAS_URL,{
+  signal: AbortSignal.timeout(8000),});
   if (!response.ok) {
     throw new Error("NaaS svarade inte");
   }
