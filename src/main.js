@@ -34,7 +34,7 @@ function visaNaasSvar(data, aktivitet) {
   throw new Error("Tomt svar från NaaS");
 }
 
-  let text = `Du vill undvika ${aktivitet}.`;
+  let text = `Du vill undvika att ${aktivitet}.`;
 
   if (aktuelltVader && aktuellOrt) {
     text += ` I ${aktuellOrt} är det ${aktuelltVader.temperatur}°C och ${aktuelltVader.beskrivning.toLowerCase()}, så du kan använda den här ursäkten: ${data.reason}`;
