@@ -1,5 +1,9 @@
 # Daily Standups
 
+## 6/10
+
+Richard har bytt favicon från Vites.
+
 ## 5/10
 
 Elina: Har gjort ett kort, granskar sidan och hittade på en ny uppgift med finjustering. Lagt i backloggen.

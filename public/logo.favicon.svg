@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="64" height="64" rx="12" fill="#F2F2F2"/>
+  <g transform="translate(3.2 10.4) scale(0.9)">
+    <g stroke="#E0A93B" stroke-width="3">
+      <path d="M40 14a6 6 0 0 1 11 3"/>
+      <line x1="46" y1="4" x2="46" y2="7"/>
+      <line x1="53" y1="7" x2="51" y2="9"/>
+      <line x1="56" y1="14" x2="53" y2="14"/>
+    </g>
+    <g stroke="#1F4D40" stroke-width="4">
+      <path d="M4 34 L20 14 L28 24 L37 11 L60 34"/>
+      <path d="M20 14 L24 22"/>
+      <path d="M37 11 L33 20"/>
+    </g>
+    <g stroke="#1F4D40" stroke-width="3.5">
+      <path d="M6 40 q5 -4 10 0 t10 0 t10 0 t10 0 t10 0"/>
+      <path d="M14 45 q5 -4 10 0 t10 0 t10 0"/>
+    </g>
+  </g>
+</svg>
