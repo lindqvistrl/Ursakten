@@ -1,6 +1,7 @@
 # Daily Standups
 
 ## 6/10
+Yanica: Igår så fortsatte jag med uppgiften där jag ska se till att byta alert() vid tomt inputfält mot ett meddelande i svarsfältet. Vi ligger långt fram och bra till i arbetet och kommer att fortsätta med redovisningen idag och egna reflektionen.
 
 Richard har bytt favicon från Vites.
 
@@ -8,8 +9,10 @@ Richard har bytt favicon från Vites.
 
 Elina: Har gjort ett kort, granskar sidan och hittade på en ny uppgift med finjustering. Lagt i backloggen.
 
+Yanica: Gjorde inte riktigt det jag tänkt i fredags men istället gick jag igenom JavaScripts koden i projektet efter att jag kört tillgänglighet koll med Lighthouse. Frågade ChatGPT om koden har en bra prestanda och vad som kan göras bättre. Det visades sig vara att bakgrundsbilden behövdes minskas. Fortsatte att granska koden, även HTML och CSS. Jag kommer att fortsätta med en uppgift där jag ska se till att byta alert() vid tomt inputfält mot ett meddelande i svarfältet istället. Vi har kommit långt nu och det är mycket gjort.
+
 ## 2/10
-Jag har igår hämtat uppdateringar från main och gjort en pull request på min senaste branch som var input/knapp uppgifter. Därefter fortsatte jag med en ny branch där jag la till att det inte går att få fram data från Naas API om inputfältet är tomt bla. Jag kommer att fortsätta kika på JavaScript samt API idag.
+Yanica: Jag har igår hämtat uppdateringar från main och gjort en pull request på min senaste branch som var input/knapp uppgifter. Därefter fortsatte jag med en ny branch där jag la till att det inte går att få fram data från Naas API om inputfältet är tomt bla. Jag kommer att fortsätta kika på JavaScript samt API idag.
 
 Dennis har jobbat med JavaScript och kombinerat användarens input, väder/plats och NaaS-ursäkten till ett gemensamt svar i svarsrutan.
 
