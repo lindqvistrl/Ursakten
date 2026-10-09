@@ -1,5 +1,7 @@
 # Ursäkten
 
+Grupparbete i kursen JavaScript, HTML och CSS på Medieinstitutet, hösten 2026.
+
 En webbapp som hjälper dig att slippa göra saker.
 
 ## Vad den gör
@@ -87,7 +89,14 @@ Vi sparar ingenting. Nekar du positionen fungerar appen ändå, men utan väder 
 
 ## Deltagare
 
-- [Richard Lindqvist](https://github.com/lindqvistrl)
+## Deltagare
+
+- [Richard Lindqvist](https://github.com/lindqvistrl): projektuppsättning med Vite och Sass, formulär och svarsruta i HTML och CSS, hämtning av position och väder (Geolocation, Open-Meteo, BigDataCloud), tillgänglighet för skärmläsare och tangentbord, bildoptimering och publicering via GitHub Actions.
+  
 - [Elina Aspman](https://github.com/ElinaAspman)
+  
 - [Dennis Kvarnström](https://github.com/DEKV1)
+  
 - [Yanica Svensson](https://github.com/sweets86)
+
+
