@@ -1,5 +1,7 @@
 # Ursäkten
 
+Grupparbete i kursen JavaScript, HTML och CSS på Medieinstitutet, hösten 2026.
+
 En webbapp som hjälper dig att slippa göra saker.
 
 ## Vad den gör
