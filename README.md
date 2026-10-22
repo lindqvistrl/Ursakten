@@ -88,15 +88,36 @@ Appen frågar efter din position för att visa väder och ort. Positionen skicka
 Vi sparar ingenting. Nekar du positionen fungerar appen ändå, men utan väder och ort.
 
 ## Deltagare
-
-## Deltagare
-
-- [Richard Lindqvist](https://github.com/lindqvistrl): projektuppsättning med Vite och Sass, formulär och svarsruta i HTML och CSS, hämtning av position och väder (Geolocation, Open-Meteo, BigDataCloud), tillgänglighet för skärmläsare och tangentbord, bildoptimering och publicering via GitHub Actions.
-  
 - [Elina Aspman](https://github.com/ElinaAspman)
   
 - [Dennis Kvarnström](https://github.com/DEKV1)
   
 - [Yanica Svensson](https://github.com/sweets86)
+
+- [Richard Lindqvist](https://github.com/lindqvistrl):
+- ## Min del 
+
+Jag skrev 47 av projektets 92 uppgifter i backloggen och byggde stora delar av HTML-strukturen.
+
+**Väderfunktionen**
+- [Hämtar användarens position](https://github.com/lindqvistrl/Ursakten/commit/9c097fa)
+- [Anropar Open-Meteo med koordinaterna](https://github.com/lindqvistrl/Ursakten/commit/7c76f30)
+- [Plockar ut temperatur och väder ur svaret](https://github.com/lindqvistrl/Ursakten/commit/ee5b1b3)
+- [Visar ortnamn i formulärkortet](https://github.com/lindqvistrl/Ursakten/commit/e69ad61)
+
+**HTML** (som medförfattare)
+- [Grund i index.html med svenska och titel](https://github.com/lindqvistrl/Ursakten/commit/9585378)
+- [Header med logga och sidnamn](https://github.com/lindqvistrl/Ursakten/commit/b409a94)
+
+**Tillgänglighet**
+- [Klassen visuellt-dold](https://github.com/lindqvistrl/Ursakten/commit/203b6af)
+- [Svarsrutan läses upp av skärmläsare](https://github.com/lindqvistrl/Ursakten/commit/317a611)
+- [Focus-state på knappen](https://github.com/lindqvistrl/Ursakten/commit/30eb5eb)
+
+**Prestanda och publicering**
+- [Krympte bakgrundsbilden från 3 MB till 548 kB](https://github.com/lindqvistrl/Ursakten/commit/35905fb)
+- [Publicering till GitHub Pages via GitHub Actions](https://github.com/lindqvistrl/Ursakten/commit/8a59df4)
+  
+
 
 
